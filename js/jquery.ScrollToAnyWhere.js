@@ -33,9 +33,9 @@
             //监听滚动条距离顶部的距离，并添加相关class属性来改变元素的样式
             $(window).scroll(function () {
                 //alert(this.options);
-                ( $(window).scrollTop() > offset ) ? _this.addClass('is-visible') : _this.removeClass('is-visible fade-out');
+                ( $(window).scrollTop() > offset ) ? _this.addClass('div-visible') : _this.removeClass('div-visible div-fade-out');
                 if ($(window).scrollTop() > offset_opacity) {
-                    _this.addClass('fade-out');
+                    _this.addClass('div-fade-out');
                 }
             });
             //当前元素被点击后执行相关方法

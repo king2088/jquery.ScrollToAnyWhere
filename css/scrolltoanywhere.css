@@ -26,11 +26,11 @@ a{text-decoration: none}
 .goComments:hover,.goDown:hover,.goTop:hover{
     background:#008b8b
 }
-.is-visible{
+.div-visible{
     visibility:visible;
     opacity:1
 }
-.fade-out{
+.div-fade-out{
     opacity:.5
 }
 .custom{
