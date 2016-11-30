@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jq.js"></script>
+<script src="js/jquery.ScrollToAnyWhere.js"></script>
+<body>
+<script>
+    $(function () {
+        $('.top').ScrollToAnyWhere('anywhere','.down');
+        $('.down').ScrollToAnyWhere('down');
+        $('.custom').ScrollToAnyWhere('anywhere','.test',{
+            'offset':500,
+            'offset_opacity':1500,
+            'times':50
+        });
+        $('.down').ScrollToAnyWhere('sss');
+    });
+</script>
+<div class="test" style="height: 800px"></div>
+<div class="down">到底部</div>
+<div style="height: 2000px; width: 100%;background: wheat"></div>
+<div class="top">到div.down</div>
+<div class="custom">自定义</div>
+</body>
+</html>

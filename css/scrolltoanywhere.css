@@ -1,0 +1,120 @@
+/*reset css*/
+body,html{
+    margin: 0;
+    padding: 0;
+    background: #F2F2F2;
+}
+a{text-decoration: none}
+/*Main CSS*/
+.goAnyWhereTool{
+    position:fixed;bottom:40px;right:10px
+}
+.goComments,.goDown,.goTop,.custom,.custom-to{
+    display:block;
+    padding:4px 8px;
+    box-shadow:0 0 10px rgba(0,0,0,.05);
+    overflow:hidden;
+    white-space:nowrap;
+    background:rgba(232,98,86,.8);
+    color:#fff;
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:all .3s;transition:all .3s;
+    margin-top:1px;
+    text-align: center;
+}
+.goComments:hover,.goDown:hover,.goTop:hover{
+    background:#008b8b
+}
+.is-visible{
+    visibility:visible;
+    opacity:1
+}
+.fade-out{
+    opacity:.5
+}
+.custom{
+    background: teal;
+    color: #FFFFFF;
+}
+.custom-to{
+    background: black;
+    color: #FFFFFF;
+}
+
+/*custom CSS(DEMO)*/
+body{
+    font-family: "Microsoft YaHei UI","Adobe Hebrew";
+    font-size: 100%;
+    font-weight: lighter;
+}
+.content{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 10px;
+    border-left: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+}
+.content h1{
+    font-size: 32px;
+    font-weight: lighter;
+}
+.content h2{
+    font-size: 28px;
+    font-weight: lighter;
+}
+.content h2#down{
+    background: darkcyan; padding: 5px;color: #FFFFFF; display: inline-block;border-radius: 6px; margin-right: 20px;
+    font-size: 24px;
+}
+.content h2#min{
+    background: chocolate; padding: 5px;color: #FFFFFF; display: inline-block;border-radius: 6px;font-size: 24px;margin-right: 20px;
+}
+.content h2#github{
+    background: blue; padding: 5px;color: #FFFFFF; display: inline-block;border-radius: 6px;font-size: 24px;
+}
+.content h2#min:hover{
+    background: darkgreen;
+    transition: all .5s;
+}
+.content h2#down:hover,.content h2#github:hover{
+    background: crimson;
+    transition: all .5s;
+}
+.content h2#down a,.content h2#min a,.content h2#github a{
+    color: #FFFFFF;
+}
+.content h3{
+    font-size: 24px;
+    font-weight: lighter;
+}
+.content p{
+    line-height: 2;
+}
+.content p.code{
+    background: #F2F2F2;
+    border-radius: 6px;
+    width: 70%;
+    padding: 10px;
+    color: crimson;
+}
+.content .logo{
+    width: 243px;
+    margin: 0 auto;
+    background: darkcyan;
+    border-radius: 6px;
+    padding: 5px;
+}
+.content footer{
+    width: 90%;
+    height: 60px;
+    font-size: 12px;
+    line-height: 60px;
+    background: #F2F2F2;
+    color: chocolate;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}

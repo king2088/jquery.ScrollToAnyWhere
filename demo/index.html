@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery.ScrollToAnyWhere.js demo</title>
+    <link rel="stylesheet" href="../css/scrolltoanywhere.css">
+</head>
+<body>
+<div class="content">
+    <h1 style="width: 100%;text-align: center">jQuery.ScrollToAnyWhere.js v1.1.0</h1>
+    <div class="logo"><img src="http://jquery.com/jquery-wp-content/themes/jquery/images/logo-jquery.png" alt=""></div>
+    <h1>What's jquery.ScrollToAnyWhere.js?</h1>
+    <p>jquery.ScrollToAnyWhere.js是一个jQuery滚动插件，基本上，只要给出元素id或class，即可实现滚动。其中包含了，<strong>滚动到顶部(Scroll to Top)</strong>、<strong>滚动到底部(Scroll to Bottom)</strong>、<strong style="color: darkcyan">滚动到任意位置(Scroll to AnyWhere)</strong>，这三个功能</p>
+    <h2 id="down"><a href="">下载 DownLoad</a></h2>
+    <h2 id="min"><a href="">下载min版 DownLoad min</a></h2>
+    <h2 id="github"><a href="">GitHub</a></h2>
+    <h2>一、兼容性 Browser Compatibility</h2>
+    <p>什么，你还在用IE6？一个插件，大家都很在乎兼容性，本人鄙视IE，因此仅支持jQuery 2.0版本以上的jQuery版本，2.0版本以下未进行过测试，IE10以下浏览器未进行测试。<strong style="color: brown">不支持IE9及以下版本浏览器</strong>。<br><span style="color: chartreuse">IE9- NO WAY</span>.<br><span style="color: darkgoldenrod">jquery library 2.0+</span></p>
+    <h2>二、使用方法 How to use jquery.ScrollToAnyWhere.js?</h2>
+    <h3>1、导入jQuery文件 Import jQuery library</h3>
+    <p>在html代码head或者body标签中引入jQuery库和jquery.ScrollToAnyWhere.js<br>Include jquery library and jquery.ScrollToAnyWhere.js in html tag for head or body</p>
+    <p class="code">
+        &lt;head&gt;<br>
+        &lt;meta charset="UTF-8"&gt;<br>
+        &lt;title&gt;jquery.ScrollToAnyWhere.js demo&lt;/title&gt;<br>
+        &lt;link rel="stylesheet" href="../css/ScrollToAnyWhere.css"&gt;<br>
+        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;<br>
+        &lt;script src="js/jquery.ScrollToAnyWhere.js"&gt;&lt;/script&gt;<br>
+        &lt;/head&gt;<br>
+    </p>
+    <p>or</p>
+    <p class="code">
+        &lt;body&gt;<br>
+        //html代码内容......<br>
+        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;<br>
+        &lt;script src="js/jquery.ScrollToAnyWhere.js"&gt;&lt;/script&gt;<br>
+        &lt;/body&gt;<br>
+    </p>
+    <h3>2、使用方法</h3>
+    <p>
+        <strong>$('selector').ScrollToAnyWhere(op,elements,options);</strong><br>
+        <strong>op</strong>有3个值，分别是‘top’，‘down’，‘anywhere’，分别代表‘上’，‘下’，‘任意位置’<br>
+        <strong>elements</strong>为需要滚动到的位置元素id或class名称，必须带有‘.’与‘#’<br>
+        <strong>options</strong>有3个固定名称，值可以任意改变。分别是'offset'，'offset_opacity'，'times'，分别代表‘距离顶部距离（当距离顶部为多少时，淡出相应的图标、文字）’，‘滚动条滚动到的位置（到达此位置时，图标或文字自动透明）’，‘滚动速度’
+    </p>
+    <h3>3、滚动到顶部(Scroll to Top)</h3>
+    <p class="code">
+        &lt;body&gt;<br>
+        //html代码内容......<br>
+        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;<br>
+        &lt;script src="js/jquery.ScrollToAnyWhere.js"&gt;&lt;/script&gt;<br>
+        &lt;script&gt;<br>
+        $(function () {<br>
+        $('.goTop').ScrollToAnyWhere('top');<br>
+        })<br>
+        &lt;/script&gt;<br>
+        &lt;/body&gt;<br>
+    </p>
+    <h3>4、滚动到底部(Scroll to Bottom)</h3>
+    <p class="code">
+        &lt;body&gt;<br>
+        //html代码内容......<br>
+        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;<br>
+        &lt;script src="js/jquery.ScrollToAnyWhere.js"&gt;&lt;/script&gt;<br>
+        &lt;script&gt;<br>
+        $(function () {<br>
+        $('.goDown').ScrollToAnyWhere('down');<br>
+        })<br>
+        &lt;/script&gt;<br>
+        &lt;/body&gt;<br>
+    </p>
+    <h3>5、滚动到任意位置(Scroll to AnyWhere)</h3>
+    <p>使用方法为$(selector).ScrollToAnyWhere('anywhere',selector),第一个selector为当前产生事件的元素，第二个selector则为将要滚动到的元素。两个selector都需要填写正确的class与id名称，如<span style="color: red; font-weight: bold">$('#div').ScrollToAnyWhere('anywhere','.class')或$('#div').ScrollToAnyWhere('anywhere','#class')</span></p>
+    <p class="code">
+        &lt;body&gt;<br>
+        //html代码内容......<br>
+        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;<br>
+        &lt;script src="js/jquery.ScrollToAnyWhere.js"&gt;&lt;/script&gt;<br>
+        &lt;script&gt;
+        $(function () {
+        $('.goComments').ScrollToAnyWhere('anywhere','.comments');
+        })
+        &lt;/script&gt;
+        &lt;/body&gt;<br>
+    </p>
+    <h3>6、自定义可选参数(options)</h3>
+    <p class="code">
+        &lt;body&gt;<br>
+        //html代码内容......<br>
+        &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;<br>
+        &lt;script src="js/jquery.ScrollToAnyWhere.js"&gt;&lt;/script&gt;<br>
+        &lt;script&gt;<br>
+        $(function () {<br>
+        $('.custom').ScrollToAnyWhere('anywhere','.test',{<br>
+        'offset':500,<br>
+        'offset_opacity':1500,<br>
+        'times':50<br>
+        });<br>
+        })<br>
+        &lt;/script&gt;<br>
+        &lt;/body&gt;<br>
+    </p>
+    <h2 id="demo">三、演示 demo</h2>
+    <p>请查看本页右下角的粉红色图标，点击即可体验ScrollToAnyWhere的滚动效果了。<br>
+    本页面右下角的演示源码如下：</p>
+    <p class="code">
+        &lt;script&gt;<br>
+        $(function () {<br>
+        $('.goTop').ScrollToAnyWhere('top');<br>
+        $('.goDown').ScrollToAnyWhere('down');<br>
+        $('.goComments').ScrollToAnyWhere('anywhere','#demo');<br>
+        $('.custom').ScrollToAnyWhere('anywhere','.logo',{<br>
+        'offset':100,<br>
+        'offset_opacity': $(document).height() - 300,<br>
+        'times':8000<br>
+        });<br>
+        })<br>
+        &lt;/script&gt;<br>
+    </p>
+    <h2 id="pay">四、捐助 Contribution</h2>
+    <p>支付宝捐助 Alipay Account : <strong>514337551@qq.com</strong></p>
+    <p><img src="images/alipay.png" width="300" alt=""></p>
+    <footer>
+        CopyRight @ 2016 jQuery.ScrollToAnyWhere.js. Developer king2088.
+    </footer>
+</div>
+<div class="goAnyWhereTool">
+    <a class="custom-to" href="#" title="custom自定义">Download</a>
+    <a class="goTop" href="#" title="返回顶部">goTop</a>
+    <a class="goComments" href="#" title="到#demo元素">捐助</a>
+    <a class="goDown" href="#" title="goDown到底部">goDown</a>
+    <a class="custom" href="#" title="custom自定义">Logo</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../js/jquery.ScrollToAnyWhere.js"></script>
+<script>
+    $(function () {
+        $('.goTop').ScrollToAnyWhere('top');
+        $('.goDown').ScrollToAnyWhere('down');
+        $('.goComments').ScrollToAnyWhere('anywhere','#pay');
+        $('.custom').ScrollToAnyWhere('anywhere','.logo',{
+            'offset':100,
+            'offset_opacity': $(document).height() - 300,
+            'times':8000
+        });
+        $('.custom-to').ScrollToAnyWhere('anywhere','#down',{
+            'offset':$(document).height() - $(document).height()/2,
+            'offset_opacity': $(document).height(),
+            'times':200
+        });
+    })
+</script>
+</body>
+</html>
