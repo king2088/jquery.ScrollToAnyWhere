@@ -43,14 +43,14 @@
                 event.preventDefault();
                 //返回顶部，$('.div').GoanyWhere('top');
                 if (op == 'top') {
-                    $('body,html').animate({
+                    $('body,html').stop().animate({
                             scrollTop: 0
                         }, time
                     );
                 }
                 //到达底部，$('.div').GoanyWhere('down');
                 if (op == 'down') {
-                    $('body,html').animate({
+                    $('body,html').stop().animate({
                             scrollTop: $(document).height()
                         }, time
                     );
@@ -58,7 +58,7 @@
 
                 //到达某个class或者id所在位置 $('.div').GoanyWhere('anywhere','.selector');
                 if (op == 'anywhere') {
-                    $('body,html').animate({
+                    $('body,html').stop().animate({
                             scrollTop: $(elements).offset().top
                         }, time
                     );
