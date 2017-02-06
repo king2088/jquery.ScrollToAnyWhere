@@ -85,7 +85,8 @@ options有3个固定名称，值可以任意改变。分别是'offset'，'offset
     </body>
 三、演示 demo
 ============================
-演示地址：https://king2088.github.io/jquery.ScrollToAnyWhere/demo/index.html<br />
+演示地址1：http://www.egtch.com/work/jQueryPlug-in/ScrollToAnyWhere/demo/index.html<br />
+演示地址2：https://king2088.github.io/jquery.ScrollToAnyWhere/demo/index.html<br />
 请查看本页右下角的粉红色图标，点击即可体验ScrollToAnyWhere的滚动效果了。<br />
 本页面右下角的演示源码如下：
 
